@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "dev": "deno run -A --watch src/main.ts"
+  },
+  "imports": {
+    "@fluxerjs/core": "npm:@fluxerjs/core@^1.2.2",
+    "@std/dotenv": "jsr:@std/dotenv@^0.225.6"
+  }
+}

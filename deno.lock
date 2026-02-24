@@ -1,0 +1,66 @@
+{
+  "version": "5",
+  "specifiers": {
+    "jsr:@std/dotenv@~0.225.6": "0.225.6",
+    "npm:@fluxerjs/core@^1.2.2": "1.2.2"
+  },
+  "jsr": {
+    "@std/dotenv@0.225.6": {
+      "integrity": "1d6f9db72f565bd26790fa034c26e45ecb260b5245417be76c2279e5734c421b"
+    }
+  },
+  "npm": {
+    "@fluxerjs/builders@1.2.2": {
+      "integrity": "sha512-647yuM44Fs+Cf/MKo01XRWoVb7RoFdSOBHebFiTLLCTO/tqz+dgZ4wgVsDNu9O/BB/oZ2tjAp9jDTxvXMXkUbA==",
+      "dependencies": [
+        "@fluxerjs/types",
+        "@fluxerjs/util"
+      ]
+    },
+    "@fluxerjs/collection@1.2.2": {
+      "integrity": "sha512-ryytiFh38gELqOLHBtL6Tz4f7/7DIu9L2CMTOqNYoer7E1ef8ukU7YiyANASWHgTf34hcGMC0tdi0dcFFFKkKQ=="
+    },
+    "@fluxerjs/core@1.2.2": {
+      "integrity": "sha512-P+c1jveYqwWGT6vafw+U1WmDPJ0Brp+aNa52Qp2vSsEQ3FLNUg+/25PhyrcPP0x2Mf7zoa1Wv9zGLlkHlKb9Ag==",
+      "dependencies": [
+        "@fluxerjs/builders",
+        "@fluxerjs/collection",
+        "@fluxerjs/rest",
+        "@fluxerjs/types",
+        "@fluxerjs/util",
+        "@fluxerjs/ws"
+      ]
+    },
+    "@fluxerjs/rest@1.2.2": {
+      "integrity": "sha512-Y96A2wQJ8akiAPpiyQm2WWBfNvrQBGIxIuwFCTuXkWg/g+0D6hYrVB7VHxQlnBeDUlj4T+fSJiqSoAYQ3pwrCQ==",
+      "dependencies": [
+        "@fluxerjs/types"
+      ]
+    },
+    "@fluxerjs/types@1.2.2": {
+      "integrity": "sha512-z3AcTxVF2iY/D0XR8xGIcx+c6LY6eNLWR0uO46xNGmEqpm5guE3joDz/EN8DfAZXuap/ludgqX6EA8dLADIeMg=="
+    },
+    "@fluxerjs/util@1.2.2": {
+      "integrity": "sha512-H0c6rKufJJQsz7cloZSK1EqqbRCaxEIF2LdJ4cIRiGPczQTleD2xAIOQ2NvBZxnFvwx+OeetZs79b42bsjcjHQ==",
+      "dependencies": [
+        "@fluxerjs/types"
+      ]
+    },
+    "@fluxerjs/ws@1.2.2": {
+      "integrity": "sha512-twg1wYRYo4DlEHsVHSuUhSAKGK2qTmHM2PV3LNSdE0HdGQIB1EFviSuo0rWDpCb1sVTwIzBVMtthrlxyPfVtKA==",
+      "dependencies": [
+        "@fluxerjs/types",
+        "ws"
+      ]
+    },
+    "ws@8.19.0": {
+      "integrity": "sha512-blAT2mjOEIi0ZzruJfIhb3nps74PRWTCz1IjglWEEpQl5XS/UNama6u2/rjFkDDouqr4L67ry+1aGIALViWjDg=="
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@std/dotenv@~0.225.6",
+      "npm:@fluxerjs/core@^1.2.2"
+    ]
+  }
+}
