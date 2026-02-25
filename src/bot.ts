@@ -1,6 +1,7 @@
 import { Client, Message } from "@fluxerjs/core";
 import { getVoiceManager, VoiceManager } from "@fluxerjs/voice";
 import { PlayCommand } from "./play.ts";
+import { LeaveCommand } from "./leave.ts";
 
 export class Bot {
   private client: Client;
@@ -33,6 +34,8 @@ export class Bot {
 
     if (message.content.startsWith("b!play")) {
       await new PlayCommand(this.client, this.voiceManager, message).run();
+    } else if (message.content.startsWith("b!leave")) {
+      await new LeaveCommand(this.voiceManager, message).run();
     }
   }
 }
