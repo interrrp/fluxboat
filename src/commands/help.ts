@@ -30,7 +30,7 @@ export class HelpCommand implements Command {
   private async showSpecificCommand({ message, args, commands }: CommandRunContext): Promise<void> {
     const requestedCommandName = args[0];
 
-    const command = commands.filter((c) => c.name === requestedCommandName)[0];
+    const command = commands.find((c) => c.name === requestedCommandName);
     if (command === undefined) {
       await replyError(message, `Unknown command ${requestedCommandName}`);
       return;
