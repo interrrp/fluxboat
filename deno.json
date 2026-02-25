@@ -12,6 +12,7 @@
     "lineWidth": 100
   },
   "imports": {
+    "~/": "./src/",
     "@fluxerjs/core": "npm:@fluxerjs/core@^1.2.1",
     "@fluxerjs/voice": "npm:@fluxerjs/voice@^1.2.1",
     "@std/assert": "jsr:@std/assert@^1.0.19",

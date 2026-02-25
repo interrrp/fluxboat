@@ -1,18 +1,16 @@
 import { Client, Message } from "@fluxerjs/core";
-import { getVoiceManager, VoiceManager } from "@fluxerjs/voice";
-import { PlayCommand } from "./play.ts";
-import { LeaveCommand } from "./leave.ts";
+import { CommandHandler } from "~/commands/handler.ts";
 
 export class Bot {
   private client: Client;
-  private voiceManager: VoiceManager;
+  private commandHandler: CommandHandler;
 
   constructor() {
     this.client = new Client({ intents: 0 })
       .events.Ready(this.onReady.bind(this))
       .events.MessageCreate(this.onMessageCreate.bind(this));
 
-    this.voiceManager = getVoiceManager(this.client);
+    this.commandHandler = new CommandHandler();
   }
 
   public async run(): Promise<void> {
@@ -28,14 +26,6 @@ export class Bot {
   }
 
   private async onMessageCreate(message: Message): Promise<void> {
-    if (message.author.bot) {
-      return;
-    }
-
-    if (message.content.startsWith("b!play")) {
-      await new PlayCommand(this.client, this.voiceManager, message).run();
-    } else if (message.content.startsWith("b!leave")) {
-      await new LeaveCommand(this.voiceManager, message).run();
-    }
+    await this.commandHandler.onMessageCreate(this.client, message);
   }
 }
