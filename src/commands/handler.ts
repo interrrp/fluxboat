@@ -9,7 +9,7 @@ import { COMMAND_PREFIX } from "~/utils/constants.ts";
 export interface Command {
   name: string;
   description: string;
-  examples: { [usage: string]: string };
+  examples: Record<string, string>;
   run(context: CommandRunContext): Promise<void>;
 }
 
